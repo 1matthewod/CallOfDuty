@@ -24,7 +24,7 @@ public class Base {
 	
 	
 	// constructor
-	
+	Base base = new Base();
 	
 	
 	// methods
@@ -46,7 +46,7 @@ public class Base {
 	}
 	
 	/*
-	 * returns true if the shot hit an undestroyed target
+	 * returns true if the shot hit an un-destroyed target
 	 * note: if a location has been hit before but the target is not destroyed, the method returns true
 	 */
 	public boolean shootAt(int row, int column) {
@@ -82,6 +82,7 @@ public class Base {
 	 * returns the number of shots fired
 	 */
 	public int getShotsFired() {
+		return shotsFired;
 		
 	}
 	
@@ -89,6 +90,7 @@ public class Base {
 	 * returns the target array
 	 */
 	public Target[][] getTargetsArray(){
+		return targets;
 		
 	}
 	
@@ -103,6 +105,12 @@ public class Base {
 	 * returns count of destroyed targets
 	 */
 	public int getDestroyedTargetCount() {
+		return destroyedTargetCount;
+		
+	}
+
+	public void setDestroyedTargetCount(int i) {
+		// TODO Auto-generated method stub
 		
 	}
 }

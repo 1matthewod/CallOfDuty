@@ -3,7 +3,7 @@ package callOfDuty;
 public abstract class Target {
 
 	/*
-	 * Array of length 2 that species coordinate of target hear. Head means upper left part
+	 * Array of length 2 that species coordinate of target head. Head means upper left part
 	 */
 	private int[] coordinate;
 	
@@ -34,14 +34,16 @@ public abstract class Target {
 	
 	// constructor to set up length, width, and base of particular target
 	public Target(int length, int width, Base base) {
-		
+		this.length = length;
+		this.width = width;
+		this.base = base;			
 	}
 
 	/**
 	 * @return the coordinate
 	 */
 	public int[] getCoordinate() {
-		return coordinate;
+		return this.coordinate;
 	}
 
 	/**
@@ -138,7 +140,27 @@ public abstract class Target {
 	 * returns - if the target is ground
 	 */
 	public String toString() {
-		String baseMap;
+		// assume that target is ground until find otherwise
+		String baseMap = "-";
+		
+		// see if it is a tank
+		if (this.getTargetType() == "Tank") {
+			// check if the coordinate in question has been hit. if so then it is a tank that has been hit, so return T
+			if (this.getLocationHit(this.coordinate[0], this.coordinate[1])) {
+				baseMap = "T";
+			}
+		}
+		else {
+			// if target is destroyed, mark with an X
+			if (this.isDestroyed()) {
+				baseMap = "X";
+			}
+			// otherwise, mark with an O
+			else {
+				baseMap = "O";
+			}
+		}
+		
 		
 		return baseMap;
 	}
