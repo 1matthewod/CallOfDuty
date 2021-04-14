@@ -2,9 +2,10 @@ package callOfDuty;
 
 public class Ground extends Target {
 
-	public Ground(int length, int width, Base base) {
-		super(length, width, base);
-		// TODO Auto-generated constructor stub
+	// the one-argument public constructor that sets the length, width, and base to the correct value
+	public Ground(Base base) {
+		// base is length and width of one
+		super(1, 1, base);
 	}
 
 	@Override

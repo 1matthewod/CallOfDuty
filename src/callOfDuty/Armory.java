@@ -1,9 +1,20 @@
 package callOfDuty;
 
 public class Armory extends Target {
+	
+	/*
+	 * static final int for length
+	 */
+	private static final int ARMORYLENGTH = 3;
+	
+	/*
+	 * static final int for width
+	 */
+	private static final int ARMORYWIDTH = 2;
 
-	public Armory(int length, int width, Base base) {
-		super(length, width, base);
+	// constructor for barrack with given base; sets length and width using the above values
+	public Armory(Base base) {
+		super(ARMORYLENGTH, ARMORYWIDTH, base);
 		// TODO Auto-generated constructor stub
 	}
 

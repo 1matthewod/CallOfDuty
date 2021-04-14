@@ -2,9 +2,9 @@ package callOfDuty;
 
 public class SentryTower extends Target {
 
-	public SentryTower(int length, int width, Base base) {
-		super(length, width, base);
-		// TODO Auto-generated constructor stub
+	// constructor for sentry tower, with length and width of one
+	public SentryTower(Base base) {
+		super(1, 1, base);
 	}
 
 	@Override

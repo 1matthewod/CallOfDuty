@@ -1,10 +1,20 @@
 package callOfDuty;
 
 public class Barrack extends Target {
+	
+	/*
+	 * static int for length of barrack
+	 */
+	private static final int BARRACKLENGTH = 3;
+	
+	/*
+	 * static int for width of barrack
+	 */
+	private static final int BARRACKWIDTH = 1;
 
-	public Barrack(int length, int width, Base base) {
-		super(length, width, base);
-		// TODO Auto-generated constructor stub
+	// constructor for barrack with given base, sets the length and width
+	public Barrack(Base base) {
+		super(BARRACKLENGTH, BARRACKWIDTH, base);
 	}
 
 	@Override
